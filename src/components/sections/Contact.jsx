@@ -36,7 +36,7 @@ export const Contact = () => {
             <div>
               <input
                 type="text"
-                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-blue-400 transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Name..."
                 {...register("fullName", {
                   required: "Full name is required",
@@ -56,7 +56,7 @@ export const Contact = () => {
             <div>
               <input
                 type="email"
-                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-blue-400 transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="example@gmail.com"
                 {...register("email", {
                   required: "Email is required",
@@ -76,7 +76,7 @@ export const Contact = () => {
             <div>
               <input
                 type="number"
-                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-blue-400 transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="+63 (9XXXXXXXXX)"
                 style={{
                   WebkitAppearance: 'none',
@@ -108,7 +108,7 @@ export const Contact = () => {
             <div>
               <textarea
                 rows={5}
-                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-96 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-blue-400 transition-all focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Your Message"
                 {...register("message", {
                   required: "Message is required",
