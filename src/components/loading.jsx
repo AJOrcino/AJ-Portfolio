@@ -22,7 +22,7 @@ export const Loading = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-black text-gray-100 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black text-blue-500 flex items-center justify-center">
       <div className="text-center">
         <div className="mb-4 text-4xl font-mono font-bold">
           {text}

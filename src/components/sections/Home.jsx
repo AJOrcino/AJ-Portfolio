@@ -3,7 +3,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const Home = () => {
   return (
     <section
-      id="home"
+      id="home" 
       className="flex items-center justify-center h-screen bg-gray-900 overflow-hidden"
     >
       <RevealOnScroll>
