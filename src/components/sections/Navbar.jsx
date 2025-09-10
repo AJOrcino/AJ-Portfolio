@@ -60,8 +60,8 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             </a>
             <div>
               <a
-                href="/CV/Gitcheatsheet.txt"
-                download="Gitcheat.txt"
+                href="/CV/Orcino-Allen-Resume.pdf"
+                download="Orcino-Allen-Resume.pdf"
                 className="text-gray-300 hover:text-white transition-colors p-4 py-2 bg-blue-500 text-sm rounded  mr-3 text-center items-end"
               >
                 Resume

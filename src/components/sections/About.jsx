@@ -7,19 +7,19 @@ export const About = () => {
     "BOOTSTRAP",
     "REACT",
     "TAILWIND",
-    "SCSS",
+    "FIGMA",
   ];
 
   const backEndSkills = [
     "PHP",
-    "PYTHON",
     "SQL",
     "NODE.JS",
-    "MONGODB",
     "MARIADB",
+    "MYSQL",
+    "EXPRESS.JS",
   ];
 
-  const progammingSkills = ["PHP", "JAVA", "JAVASCRIPT", "C#", "PYTHON", "C++"];
+  const progammingSkills = ["PHP", "JAVASCRIPT", "C#", "C++"];
 
   return (
     <section
@@ -32,7 +32,7 @@ export const About = () => {
             About Me
           </h2>
 
-          <div className="glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
+          <div className="glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] flex flex-col transition-all">
             <p className="text-gray-300 mb-6">
               Hi, I'm Allen Jefferson C. Orcino, a College Student passionate
               about coding and technology, I specialize in HTML, CSS,
@@ -86,7 +86,7 @@ export const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+            <div className="p-6 rounded-xl border-white/10 border hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col">
               <h3 className="text-xl font-bold mb-4 text-center">Education</h3>
               <div className="text-gray-300 space-y-2">
                 <div>
@@ -110,6 +110,12 @@ export const About = () => {
                   (2022-)
                 </div>
                 <div className="ml-4">Course: BS Information Technology</div>
+              </div>
+            </div>
+            <div className="p-6 rounded-xl border-white/10 border hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col">
+              <h3 className="text-xl font-bold mb-4 text-center">Internship</h3>
+              <div className="text-gray-300 space-y-2">
+                
               </div>
             </div>
 
