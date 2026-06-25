@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center md:items-start">
           <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold mb-2 text-center text-blue-500">Allen.AJ</h3>
+            <h3 className="text-lg font-semibold mb-2 text-center text-blue-500">Allen.Orcino</h3>
             <nav className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
               <Link to="home" smooth duration={500} className="text-gray-300 hover:text-blue-500 transition-colors cursor-pointer">Home</Link>
               <Link to="about" smooth duration={500} className="text-gray-300 hover:text-blue-500 transition-colors cursor-pointer">About</Link>
@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-4 border-t border-gray-800 text-center text-blue-400 text-sm">
-          &copy; {new Date().getFullYear()} Allen.AJ All rights reserved.
+          &copy; {new Date().getFullYear()} Allen.Orcino All rights reserved.
         </div>
       </div>
     </footer>

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import certificate1 from "../../assets/Orcino-HTML.png";
 import certificate2 from "../../assets/Orcino-PHP.png";
-import certificate3 from "../../assets/Kali-bright.jpg";
+import certificate3 from "../../assets/Orcino-EFSET.png";
+import certificate4 from "../../assets/Orcino-Cybersecurity.png";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Certificate = () => {
@@ -21,12 +22,18 @@ export const Certificate = () => {
       alt: "Certificate 2",
       title: "PHP for Beginners",
     },
-    {
-      id: 3,
-      imageUrl: certificate3,
-      alt: "Certificate 3",
-      title: "Kali-Bright",
-    },
+        {
+          id: 3,
+          imageUrl: certificate3,
+          alt: "Certificate 3",
+          title: "EFSET English Proficiency",
+        },
+        {
+          id: 4,
+          imageUrl: certificate4,
+          alt: "Certificate 4",
+          title: "CyberSecurity Awareness for Education Bussiness and Personal Safety ",
+        }
   ];
 
   const handleImageClick = (certificate) => {

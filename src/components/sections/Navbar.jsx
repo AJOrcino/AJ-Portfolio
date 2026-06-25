@@ -13,7 +13,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             href="#home"
             className="font-mono text-xl font-bold text-white z-50 ml-16"
           >
-            Allen<span className="text-blue-500">.AJ</span>
+            Allen<span className="text-blue-500">.Orcino</span>
           </a>
 
           {/* Mobile Menu Button */}

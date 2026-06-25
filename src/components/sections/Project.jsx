@@ -31,15 +31,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/TechZone-Website-"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+          
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">BESHY KO</h3>
@@ -59,15 +51,7 @@ export const Project = () => {
                   )
                 )}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/BESHYKO/tree/main/BESHY%20KO"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+             
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Twisted Tees</h3>
@@ -85,15 +69,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="#project"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+           
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Boys Over Flowers</h3>
@@ -114,15 +90,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/boys-over-flowers"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+              
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Group 2</h3>
@@ -143,15 +111,7 @@ export const Project = () => {
                   )
                 )}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/grp2_orcino_ex1.htm"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+            
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">TODO LIST</h3>
@@ -172,15 +132,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/todo-list"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+             
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Tic Tac Toe</h3>
@@ -202,15 +154,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/tictac"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+             
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Calculator</h3>
@@ -231,15 +175,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/Calculator"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+           
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Calculating Cylinder</h3>
@@ -259,15 +195,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/C-Calculating-Cylinder/blob/main/Cylinder%20Algorithm.cpp"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+      
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">All Sorting</h3>
@@ -291,15 +219,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/All-sorting-/blob/main/sorting.cpp"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+             
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">Menu Order</h3>
@@ -322,15 +242,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/Menu/blob/main/MenuOrder.java"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+    
             </div>
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transiton">
               <h3 className="text-xl font-bold mb-2">SUDOKU</h3>
@@ -354,15 +266,7 @@ export const Project = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/AJOrcino/Menu/blob/main/MenuOrder.java"
-                  target="blank"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project
-                </a>
-              </div>
+           
             </div>
           </div>
         </div>
