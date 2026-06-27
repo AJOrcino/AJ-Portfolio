@@ -1,66 +1,68 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Contact = () => {
+  const contactInfo = [
+    {
+      title: "Email Address",
+      value: "allenjeffersonorcino@gmail.com",
+      href: "mailto:allenjeffersonorcino@gmail.com",
+      type: "link",
+    },
+    {
+      title: "Contact Number",
+      value: "+63 981 173 2889",
+      href: "tel:+639811732889",
+      type: "link",
+    },
+    {
+      title: "Location",
+      value: "Alabang, Muntinlupa City, Philippines",
+      href: null,
+      type: "text",
+    },
+  ];
+
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20 bg-gray-900 overflow-hidden"
+      className="flex min-h-screen items-center justify-center overflow-hidden bg-slate-950 px-6 py-20"
     >
       <RevealOnScroll>
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-            Contact Me
+        <div className="mx-auto max-w-5xl px-4 text-center">
+          <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-200">
+            Contact
+          </span>
+          <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+            Let’s build something meaningful together
           </h2>
 
-          <p className="text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Bachelor of Science in Information Technology graduate with a
-            passion for software development and modern web technologies.
-            Dedicated to building responsive, user-friendly, and efficient
-            digital solutions while continuously expanding technical expertise
-            and professional experience.
+          <p className="mx-auto mb-10 mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">
+            I’m open to opportunities, collaborations, and conversations about
+            meaningful software products and user-focused digital experiences.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-3 items-stretch">
-            {/* Email */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 min-h-[180px] flex flex-col justify-center backdrop-blur-sm transition-all duration-300 hover:border-blue-500 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
-              <h3 className="text-blue-400 text-lg font-semibold uppercase tracking-wider mb-4">
-                Email Address
-              </h3>
-
-              <a
-                href="mailto:allenjeffersonorcino@gmail.com"
-                className="text-gray-300 hover:text-blue-400 transition break-all text-sm md:text-base"
+          <div className="grid gap-4 md:grid-cols-3">
+            {contactInfo.map((item) => (
+              <div
+                key={item.title}
+                className="flex min-h-[180px] flex-col justify-center rounded-[1.5rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
               >
-                allenjeffersonorcino@gmail.com
-              </a>
-            </div>
+                <h3 className="mb-4 text-lg font-semibold uppercase tracking-wider text-cyan-300">
+                  {item.title}
+                </h3>
 
-            {/* Phone */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 min-h-[180px] flex flex-col justify-center backdrop-blur-sm transition-all duration-300 hover:border-blue-500 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
-              <h3 className="text-blue-400 text-lg font-semibold uppercase tracking-wider mb-4">
-                Contact Number
-              </h3>
-
-              <a
-                href="tel:+639811732889"
-                className="text-gray-300 hover:text-blue-400 transition text-sm md:text-base"
-              >
-                +63 981 173 2889
-              </a>
-            </div>
-
-            {/* Location */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 min-h-[180px] flex flex-col justify-center backdrop-blur-sm transition-all duration-300 hover:border-blue-500 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
-              <h3 className="text-blue-400 text-lg font-semibold uppercase tracking-wider mb-4">
-                Location
-              </h3>
-
-              <p className="text-gray-300 text-sm md:text-base">
-                Alabang, Muntinlupa City,
-                <br />
-                Philippines
-              </p>
-            </div>
+                {item.type === "link" ? (
+                  <a
+                    href={item.href}
+                    className="break-all text-sm text-slate-300 transition hover:text-cyan-300 md:text-base"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-sm text-slate-300 md:text-base">{item.value}</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </RevealOnScroll>

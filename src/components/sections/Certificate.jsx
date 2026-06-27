@@ -22,18 +22,18 @@ export const Certificate = () => {
       alt: "Certificate 2",
       title: "PHP for Beginners",
     },
-        {
-          id: 3,
-          imageUrl: certificate3,
-          alt: "Certificate 3",
-          title: "EFSET English Proficiency",
-        },
-        {
-          id: 4,
-          imageUrl: certificate4,
-          alt: "Certificate 4",
-          title: "CyberSecurity Awareness for Education Bussiness and Personal Safety ",
-        }
+    {
+      id: 3,
+      imageUrl: certificate3,
+      alt: "Certificate 3",
+      title: "EFSET English Proficiency",
+    },
+    {
+      id: 4,
+      imageUrl: certificate4,
+      alt: "Certificate 4",
+      title: "CyberSecurity Awareness for Education Business and Personal Safety",
+    },
   ];
 
   const handleImageClick = (certificate) => {
@@ -51,26 +51,34 @@ export const Certificate = () => {
       <RevealOnScroll>
         <section
           id="certi"
-          className="min-h-screen flex items-center justify-center py-20 bg-gray-900"
+          className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-20"
         >
-          <div className="max-w-5xl mx-auto px-3">
-            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-              Certificates
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="mx-auto w-full max-w-6xl">
+            <div className="mb-10 text-center">
+              <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-200">
+                Certificates
+              </span>
+              <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+                Proof of skills and continuous learning
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {certificates.map((certificate) => (
                 <div
                   key={certificate.id}
-                  className="p-4 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col cursor-pointer"
+                  className="group flex cursor-pointer flex-col overflow-hidden rounded-[1.5rem] border border-slate-800 bg-slate-900/70 p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
                   onClick={() => handleImageClick(certificate)}
                 >
-                  <img
-                    src={certificate.imageUrl}
-                    alt={certificate.alt}
-                    className="w-full h-auto object-contain max-h-64 md:max-h-none"
-                  />
-                  <div className="pt-2">
-                    <h3 className="text-lg font-semibold text-gray-300 text-center">
+                  <div className="overflow-hidden rounded-[1rem] bg-slate-950/70">
+                    <img
+                      src={certificate.imageUrl}
+                      alt={certificate.alt}
+                      className="h-64 w-full object-contain transition duration-300 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="pt-4">
+                    <h3 className="text-center text-lg font-semibold text-slate-200">
                       {certificate.title}
                     </h3>
                   </div>
@@ -83,12 +91,12 @@ export const Certificate = () => {
 
       {isExpanded && selectedImage && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-50 flex justify-center items-center transition-opacity duration-300"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 py-6 backdrop-blur-sm"
           onClick={handleCloseModal}
         >
-          <div className="relative max-w-lg max-h-lg overflow-auto rounded-lg shadow-lg bg-gray-900 px-8 py-10 flex flex-col items-center">
+          <div className="relative flex max-h-[90vh] w-full max-w-3xl flex-col items-center overflow-auto rounded-[1.5rem] border border-slate-700 bg-slate-900/95 px-6 py-8 shadow-2xl shadow-cyan-500/10">
             <button
-              className="absolute top-4 right-4 text-red-500 hover:text-red-600 focus:outline-none"
+              className="absolute right-4 top-4 rounded-full p-2 text-slate-300 transition hover:bg-slate-800 hover:text-red-400"
               onClick={handleCloseModal}
             >
               <svg
@@ -106,7 +114,7 @@ export const Certificate = () => {
             <img
               src={selectedImage.imageUrl}
               alt={selectedImage.alt}
-              className="w-auto h-auto object-contain max-w-full max-h-full"
+              className="max-h-[75vh] w-auto object-contain"
               onClick={(e) => e.stopPropagation()}
             />
           </div>

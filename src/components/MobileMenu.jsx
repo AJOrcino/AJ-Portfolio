@@ -1,76 +1,56 @@
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+  const links = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Certificates", href: "#certi" },
+    { label: "Projects", href: "#project" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
-          transition-all duration-300 ease-in-out
-          ${
-            menuOpen
-              ? "h-screen opacity-100 pointer-events-auto"
-              : "h-0 opacity-0 pointer-events-none"
-          }
-        `}
+      className={`fixed left-0 top-0 z-40 flex w-full flex-col items-center justify-center bg-slate-950/95 backdrop-blur-xl transition-all duration-300 ease-in-out ${
+        menuOpen
+          ? "pointer-events-auto h-screen opacity-100"
+          : "pointer-events-none h-0 opacity-0"
+      }`}
     >
       <button
         onClick={() => setMenuOpen(false)}
-        className="absolute top-4 right-7 text-white text-3xl focus:outline-none cursor-pointer"
+        className="absolute right-6 top-5 cursor-pointer text-3xl text-slate-200 transition hover:text-cyan-300"
         aria-label="Close Menu"
       >
-        &times;
+        ×
       </button>
+
+      <div className="flex flex-col items-center space-y-4">
+        {links.map((link, index) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setMenuOpen(false)}
+            className={`text-2xl font-semibold text-white transition-all duration-300 ${
+              menuOpen
+                ? "translate-y-0 opacity-100"
+                : "translate-y-5 opacity-0"
+            }`}
+            style={{ transitionDelay: `${index * 80}ms` }}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
       <a
-        href="#home"
+        href="/CV/Orcino-Allen-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-          `}
+        className={`mt-8 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-3 text-sm font-medium text-cyan-200 transition-all duration-300 ${
+          menuOpen ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+        }`}
       >
-        Home
-      </a>
-      <a
-        href="#about"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-          `}
-      >
-        About
-      </a>
-      <a
-        href="#certi"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-          `}
-      >
-        Certificate
-      </a>
-      <a
-        href="#project"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-          `}
-      >
-        Project
-      </a>
-      <a
-        href="#contact"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-          `}
-      >
-        Contact
+        View Resume
       </a>
     </div>
   );

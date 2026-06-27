@@ -6,67 +6,46 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-slate-800 backdrop-blur-lg border-b border-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <a
-            href="#home"
-            className="font-mono text-xl font-bold text-white z-50 ml-16"
-          >
-            Allen<span className="text-blue-500">.Orcino</span>
+    <nav className="fixed top-0 z-40 w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <a href="#home" className="z-50 ml-2 text-xl font-semibold text-white md:ml-0">
+            Allen<span className="text-cyan-300">.Orcino</span>
           </a>
 
-          {/* Mobile Menu Button */}
           {!menuOpen && (
             <div
-              className="w-7 h-5 relative cursor-pointer z-40 md:hidden flex items-center justify-center text-white text-2xl"
+              className="relative z-40 flex h-5 w-7 cursor-pointer items-center justify-center text-2xl text-white md:hidden"
               onClick={() => setMenuOpen((prev) => !prev)}
             >
-              &#9776;
+              ☰
             </div>
           )}
 
-          {/* Desktop Navigation - Right-aligned */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-gray-300 hover:text-blue-500 transition-colors"
-            >
+          <div className="hidden items-center space-x-7 md:flex">
+            <a href="#home" className="text-slate-300 transition hover:text-cyan-300">
               Home
             </a>
-            <a
-              href="#about"
-              className="text-gray-300 hover:text-blue-500 transition-colors"
-            >
+            <a href="#about" className="text-slate-300 transition hover:text-cyan-300">
               About
             </a>
-            <a
-              href="#certi"
-              className="text-gray-300 hover:text-blue-500 transition-colors"
-            >
-              Certificate   
+            <a href="#certi" className="text-slate-300 transition hover:text-cyan-300">
+              Certificates
             </a>
-            <a
-              href="#project"
-              className="text-gray-300 hover:text-blue-500 transition-colors"
-            >
-              Project
+            <a href="#project" className="text-slate-300 transition hover:text-cyan-300">
+              Projects
             </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hover:text-blue-500 transition-colors"
-            >
+            <a href="#contact" className="text-slate-300 transition hover:text-cyan-300">
               Contact
             </a>
-            <div>
-              <a
-                href="/CV/Orcino-Allen-Resume.pdf"
-                download="Orcino-Allen-Resume.pdf"
-                className="text-gray-300 hover:text-white transition-colors p-4 py-2 bg-blue-500 text-sm rounded  mr-3 text-center items-end"
-              >
-                Resume
-              </a>
-            </div>
+            <a
+              href="/CV/Orcino-Allen-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
+            >
+              Resume
+            </a>
           </div>
         </div>
       </div>

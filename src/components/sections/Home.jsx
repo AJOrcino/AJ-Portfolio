@@ -1,63 +1,70 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import profilePicture from "../../assets/Graduation.jpg";
 
+const techStack = ["React", "Tailwind CSS", "JavaScript", "PHP", "C++", "Python"];
+
 export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gray-900 px-6"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-950 px-6 py-20"
     >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.18),_transparent_30%)]" />
+
       <RevealOnScroll>
-        <div className="max-w-5xl w-full">
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            {/* Profile Picture */}
+        <div className="relative w-full max-w-6xl rounded-[2rem] border border-white/10 bg-slate-900/70 p-8 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl md:p-12">
+          <div className="flex flex-col items-center gap-10 md:flex-row">
             <div className="flex-shrink-0">
-              <img
-                src={profilePicture}
-                alt="Allen Jefferson Orcino"
-                className="w-52 h-52 md:w-60 md:h-60 object-cover rounded-2xl shadow-lg"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 rounded-[1.75rem] bg-gradient-to-br from-cyan-400/40 to-blue-600/40 blur-2xl" />
+                <img
+                  src={profilePicture}
+                  alt="Allen Jefferson Orcino"
+                  className="relative h-56 w-56 rounded-[1.75rem] border border-white/10 object-cover shadow-2xl md:h-64 md:w-64"
+                />
+              </div>
             </div>
 
-            {/* Content */}
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold  bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+              <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-200">
+                Software Engineer • Frontend Developer
+              </span>
+
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">
                 Allen Jefferson Orcino
               </h1>
 
-              <p className="text-gray-400 mt-3">
+              <p className="mt-3 text-base text-slate-400 md:text-lg">
                 Alabang, Muntinlupa City, Philippines
               </p>
 
-              <p className="text-blue-400 font-medium mt-2">
-                Aspiring Software Engineer | Frontend Developer
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">
+                I build clean, scalable web experiences with a strong focus on
+                user experience, performance, and modern frontend design.
               </p>
 
-              <p className="text-gray-300 mt-6 max-w-2xl leading-relaxed">
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Bachelor of Science in Information Technology graduate
-                  aspiring to build innovative, scalable, and user-focused
-                  digital solutions. Experienced in frontend development and
-                  modern web technologies, with proficiency in JavaScript,
-                  React, Tailwind CSS, PHP, C++, and Python. Committed to
-                  continuous learning, problem-solving, and delivering
-                  high-quality software that creates meaningful value for users
-                  and organizations.
-                </p>
-              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
+                {techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 text-sm text-slate-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
-              {/* Buttons */}
-              <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+              <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
                 <a
                   href="#project"
-                  className="bg-blue-500 text-white px-7 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-blue-600 hover:-translate-y-1"
+                  className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-7 py-3 font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/20"
                 >
                   View Projects
                 </a>
 
                 <a
                   href="#contact"
-                  className="border border-gray-600 text-white px-7 py-3 rounded-lg font-medium transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10"
+                  className="rounded-xl border border-slate-700 bg-slate-800/70 px-7 py-3 font-medium text-slate-200 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10"
                 >
                   Contact Me
                 </a>

@@ -5,7 +5,7 @@ export const RevealOnScroll = ({ children }) => {
 
   useEffect(() => {
     const currentElement = ref.current;
-    
+
     if (!currentElement) return;
 
     const observer = new IntersectionObserver(
@@ -18,8 +18,8 @@ export const RevealOnScroll = ({ children }) => {
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.12,
+        rootMargin: "0px 0px -30px 0px",
       }
     );
 
@@ -31,7 +31,7 @@ export const RevealOnScroll = ({ children }) => {
   }, []);
 
   return (
-    <div ref={ref} className="reveal">
+    <div ref={ref} className="reveal w-full">
       {children}
     </div>
   );
