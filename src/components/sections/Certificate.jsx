@@ -70,12 +70,13 @@ export const Certificate = () => {
                   className="group flex cursor-pointer flex-col overflow-hidden rounded-[1.5rem] border border-slate-800 bg-slate-900/70 p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
                   onClick={() => handleImageClick(certificate)}
                 >
-                  <div className="overflow-hidden rounded-[1rem] bg-slate-950/70">
+                  <div className="relative overflow-hidden rounded-[1rem] bg-slate-950/70">
                     <img
                       src={certificate.imageUrl}
                       alt={certificate.alt}
                       className="h-64 w-full object-contain transition duration-300 group-hover:scale-[1.02]"
                     />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-slate-950/40 backdrop-blur-xl" />
                   </div>
                   <div className="pt-4">
                     <h3 className="text-center text-lg font-semibold text-slate-200">
@@ -111,12 +112,15 @@ export const Certificate = () => {
                 />
               </svg>
             </button>
-            <img
-              src={selectedImage.imageUrl}
-              alt={selectedImage.alt}
-              className="max-h-[75vh] w-auto object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="relative w-full overflow-hidden rounded-[1rem]">
+              <img
+                src={selectedImage.imageUrl}
+                alt={selectedImage.alt}
+                className="mx-auto max-h-[75vh] w-auto object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-slate-950/30 backdrop-blur-xl" />
+            </div>
           </div>
         </div>
       )}
