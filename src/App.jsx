@@ -9,6 +9,8 @@ import { About } from "./components/sections/About.jsx";
 import { Certificate } from "./components/sections/Certificate.jsx";
 import "./index.css";
 import { Footer } from "./components/Footer.jsx";
+import { PortfolioChatbot } from "./components/PortfolioChatbot.jsx";
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,6 +31,7 @@ function App() {
         <Project />
         <Contact />
         <Footer />
+        <PortfolioChatbot />
       </div>
     </>
   );

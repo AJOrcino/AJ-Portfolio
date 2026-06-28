@@ -24,14 +24,8 @@ export const Footer = () => {
               <a href="https://github.com/AJOrcino" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cyan-400/10 p-3 text-cyan-300 transition hover:bg-cyan-400/20 hover:text-cyan-200">
                 <FaGithub />
               </a>
-              <a href="https://facebook.com/your-facebook" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cyan-400/10 p-3 text-cyan-300 transition hover:bg-cyan-400/20 hover:text-cyan-200">
-                <FaFacebook />
-              </a>
               <a href="https://www.linkedin.com/in/allen-jefferson-orcino-b82924322/" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cyan-400/10 p-3 text-cyan-300 transition hover:bg-cyan-400/20 hover:text-cyan-200">
                 <FaLinkedin />
-              </a>
-              <a href="https://instagram.com/your-instagram" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cyan-400/10 p-3 text-cyan-300 transition hover:bg-cyan-400/20 hover:text-cyan-200">
-                <FaInstagram />
               </a>
             </div>
           </div>

@@ -41,17 +41,6 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         ))}
       </div>
 
-      <a
-        href="/CV/Orcino-Allen-Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => setMenuOpen(false)}
-        className={`mt-8 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-3 text-sm font-medium text-cyan-200 transition-all duration-300 ${
-          menuOpen ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-        }`}
-      >
-        View Resume
-      </a>
     </div>
   );
 };

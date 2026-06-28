@@ -1,7 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import profilePicture from "../../assets/Graduation.jpg";
 
-const techStack = ["React", "Tailwind CSS", "JavaScript", "PHP", "C++", "Python"];
+const techStack = ["React", "Tailwind CSS", "JavaScript", "C++", "Python"];
 
 export const Home = () => {
   return (
@@ -35,7 +35,7 @@ export const Home = () => {
               </h1>
 
               <p className="mt-3 text-base text-slate-400 md:text-lg">
-                Alabang, Muntinlupa City, Philippines
+                Metro Manila, Philippines
               </p>
 
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">

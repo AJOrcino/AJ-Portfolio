@@ -12,7 +12,6 @@ export const About = () => {
   ];
 
   const backEndSkills = [
-    { name: "PHP", icon: "fab fa-php" },
     { name: "PYTHON", icon: "fab fa-python" },
     { name: "SQL", icon: "fas fa-database" },
     { name: "NODE.JS", icon: "fab fa-node" },
@@ -22,7 +21,6 @@ export const About = () => {
   ];
 
   const programmingSkills = [
-    { name: "PHP", icon: "fab fa-php" },
     { name: "PYTHON", icon: "fab fa-python" },
     { name: "JAVASCRIPT", icon: "fab fa-js" },
     { name: "C#", icon: "fas fa-code" },
@@ -51,7 +49,7 @@ export const About = () => {
               Information Technology graduate aspiring to build innovative and
               user-centered digital solutions. With a foundation in frontend and
               backend development, I work with technologies such as HTML, CSS,
-              JavaScript, React, Tailwind CSS, PHP, Python, C#, C++, and MySQL.
+              JavaScript, React, Tailwind CSS, Python, C#, C++, and MySQL.
               I’m passionate about creating efficient, scalable, and responsive
               applications while continuously strengthening my technical and
               professional skills.

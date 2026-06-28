@@ -16,7 +16,7 @@ export const Contact = () => {
     },
     {
       title: "Location",
-      value: "Alabang, Muntinlupa City, Philippines",
+      value: "Metro Manila, Philippines",
       href: null,
       type: "text",
     },
