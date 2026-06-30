@@ -94,7 +94,67 @@ export const Project = () => {
         "A Sudoku-based logic game that highlights problem-solving and structured UI design.",
       tech: ["C++"],
     },
+    {
+      title: "Money Currency Converter",
+      type: "Self Practice",
+      description:
+        "A responsive currency converter built with a modern and user-friendly design.",
+      tech: ["React", "Tailwind"],
+      link: "https://ajorcino.github.io/money-currency-/",
+    },
   ];
+
+  const linkedProjects = projects.filter((project) => project.link);
+  const otherProjects = projects.filter((project) => !project.link);
+
+  const renderProjectCard = (project, index) => (
+    <div
+      key={index}
+      className="flex h-full flex-col rounded-[1.5rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
+    >
+      <div className="mb-4 flex items-start justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <h3 className="break-words text-2xl font-bold leading-tight text-white">
+            {project.title}
+          </h3>
+        </div>
+
+        <span className="shrink-0 rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 text-xs text-slate-400">
+          {project.type}
+        </span>
+      </div>
+
+      <p className="mb-5 text-sm leading-relaxed text-slate-300">
+        {project.description}
+      </p>
+
+      {project.link ? (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-5 inline-flex w-fit items-center text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"
+        >
+          View Project →
+        </a>
+      ) : (
+        <span className="mb-5 inline-flex w-fit items-center text-sm font-semibold text-slate-500 cursor-default">
+          Coming Soon
+        </span>
+      )}
+
+      <div className="mt-auto flex flex-wrap gap-2">
+        {project.tech.map((tech, key) => (
+          <span
+            key={key}
+            className="rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 text-sm text-slate-300"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <section
@@ -107,51 +167,44 @@ export const Project = () => {
             <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-200">
               Projects
             </span>
+
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
               A collection of web and programming work
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="flex h-full flex-col rounded-[1.5rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
-              >
-                <div className="mb-3 flex items-center justify-between gap-3">
-                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                  <span className="rounded-full border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-xs text-slate-400">
-                    {project.type}
-                  </span>
+          <div className="space-y-10">
+            {linkedProjects.length > 0 && (
+              <div>
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="h-px flex-1 bg-slate-800" />
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+                    Live Projects
+                  </h3>
+                  <span className="h-px flex-1 bg-slate-800" />
                 </div>
 
-                <p className="mb-4 text-sm leading-relaxed text-slate-300">
-                  {project.description}
-                </p>
-
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mb-4 inline-flex w-fit items-center text-sm font-medium text-cyan-300 transition hover:text-cyan-200"
-                  >
-                    View Project →
-                  </a>
-                )}
-
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {project.tech.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 text-sm text-slate-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {linkedProjects.map((project, index) => renderProjectCard(project, index))}
                 </div>
               </div>
-            ))}
+            )}
+
+            {otherProjects.length > 0 && (
+              <div>
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="h-px flex-1 bg-slate-800" />
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+                    Other Projects
+                  </h3>
+                  <span className="h-px flex-1 bg-slate-800" />
+                </div>
+
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {otherProjects.map((project, index) => renderProjectCard(project, index))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </RevealOnScroll>
